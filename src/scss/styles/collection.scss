@@ -1,0 +1,184 @@
+$bck-color: rgba(0, 0, 0, 0.0);
+
+
+.clock__collection {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    overflow: hidden;
+    padding-bottom: 0;
+    width: 100%;
+    height: 768px;
+
+    @media (max-width: 740px) {
+        flex-direction: column;
+        height: 100%;
+    }
+
+    &__info {
+        background-color: $bck-color;
+        z-index: 1;
+
+        &__line_style {
+            display: flex;
+            align-items: center;
+            padding-left: 20px;
+
+            &__hr {
+                color: #8B8371;
+                margin-right: 15px;
+            }
+
+            &__h1 {
+                display: inline-block;
+                font-family: 'Playfair Display', serif;
+                font-weight: 400;
+                font-size: 45px;
+            }
+        }
+
+        &__h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 30px;
+            padding-left: 85px;
+            padding-top: 10px;
+        }
+
+        &__p {
+            display: block;
+            font-weight: 300;
+            line-height: 21px;
+            padding-left: 85px;
+            padding-top: 40px;
+            color: rgba(27, 26, 23, 0.82);
+        }
+
+        &__button {
+            display: inline;
+            width: 205px;
+            height: 64px;
+            margin: 64px 0 0 85px;
+            background-color: #444240;
+
+            &:hover {
+                background-color: #8B8371;
+            }
+
+            &__a {
+                color: #FFFFFF;
+                line-height: 14px;
+                font-size: 12px;
+                font-weight: 500;
+                font-style: normal;
+                letter-spacing: 0.05em;
+                text-transform: uppercase;
+            }
+        }
+
+    }
+
+    &__img {
+        background-color: $bck-color;
+        z-index: 1;
+
+        &__image {
+            position: relative;
+            top: 25px;
+
+            @media (min-width: 500px) and(max-width: 740px) {
+                width: 350px;
+            }
+
+            @media (max-width: 500px) {
+                width: 250px;
+            }
+        }
+
+        &__price {
+            display: flex;
+            position: relative;
+            width: 150px;
+            bottom: 650px;
+            right: 100px;
+            align-items: center;
+
+            @media (min-width: 500px) and(max-width: 740px) {
+                bottom: 500px;
+                right: 50px;
+            }
+
+            @media (max-width: 500px) {
+                bottom: 300px;
+                right: 20px;
+            }
+
+            &__span {
+                font-family: "Proto", serif;
+                font-size: 16px;
+            }
+
+            &__hr {
+                margin-left: 18px;
+
+                @media (max-width: 500px) {
+                    width: 5px;
+                    margin-left: 9px;
+                }
+            }
+        }
+
+        &__size {
+            display: flex;
+            position: relative;
+            width: 200px;
+            align-items: center;
+            bottom: 116px;
+            left: 350px;
+
+
+            @media (min-width: 500px) and(max-width: 740px) {
+                left: 250px;
+            }
+
+            @media (max-width: 500px) {
+                left: 180px;
+                width: 120px;
+                ;
+            }
+
+            &__hr {
+                margin-right: 18px;
+                
+                @media (max-width: 1200px){
+                    width: 10px;
+                    margin-right: 9px;
+                }
+
+                @media (max-width: 800px) {
+                    width: 5px;
+                    margin-right: 9px;
+                }
+            }
+
+            &__span {
+                font-family: "Proto", serif;
+                font-size: 16px;
+            }
+        }
+    }
+
+    &__circle {
+        position: absolute;
+        right: 360px;
+        height: 940px;
+        width: 496px;
+        z-index: 0;
+        clip-path: inset(94px 0 82px  round 490px 0 0 490px);
+        background: linear-gradient(180deg, rgba(234, 227, 212, 0) 0%, #EAE3D4 100%);
+
+        @media (max-width:740px) {
+            right: 0;
+        }
+
+    }
+}

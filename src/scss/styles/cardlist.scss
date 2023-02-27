@@ -1,0 +1,130 @@
+.clock__popular {
+    background-color: #FFFFFF;
+    height: 700px;
+    @media (max-width: 1150px){
+        height: 100%;
+    }
+
+    &__header {
+        display: flex;
+        padding: 56px 0 35px 0;
+        align-items: center;
+        justify-content: end;
+        @media (max-width: 700px){
+            flex-direction: column;
+        }
+
+        &__h2 {
+            font-family: Playfair Display, serif;
+            width: 50%;
+            font-size: 32px;
+            line-height: 80px;
+            color: #1B1A17;
+            @media (max-width: 700px){
+                line-height: 40px;
+            }
+        }
+
+        &__button {
+            align-self: last baseline;
+            border-bottom: 1px solid #C4C0B6;
+            background-color: inherit;
+            padding-bottom: 10px;
+
+            &:hover {
+                background-color: #C4C0B6;
+            }
+
+            &__a {
+                background-color: none;
+                line-height: 19px;
+                font-weight: 500;
+                font-size: 16px;
+                color: #444240;
+
+            }
+        }
+    }
+
+    &__cardlist {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding-bottom: 86px;
+        @media (max-width: 1150px){
+            flex-direction: column;
+            padding-bottom: 20px;
+        }
+
+        &__card {
+            padding: 40px 28px;
+            @media (max-width: 1150px){
+                height: 450px;
+                overflow: hidden;
+            }
+
+            &__h3 {
+                margin-left: 12px;
+                font-family: Playfair Display, serif;
+                font-weight: 700;
+                line-height: 24px;
+                color: rgba(27, 26, 23, 0.82);
+            }
+
+            &__p {
+                margin-left: 12px;
+                font-size: 12px;
+                line-height: 16px;
+                color: rgba(27, 26, 23, 0.82);
+            }
+
+            &__div {
+                width: 313px;
+
+                &__radius {
+                    height: 313px;
+                    border-radius: 50%;
+                    border: 2px solid transparent;
+                    background: linear-gradient(to right, #FFFFFF, #C4C0B6) border-box;
+                    -webkit-mask:
+                        linear-gradient(#fff 0 0) padding-box,
+                        linear-gradient(#fff 0 0);
+                    -webkit-mask-composite: xor;
+                    mask-composite: exclude;
+                }
+
+                &__img {
+                    width: 313px;
+                    position: relative;
+                    bottom: 313px;
+                    z-index: 2;
+                }
+            }
+
+            &__button {
+                display: flex;
+                align-items: center;
+                margin-left: 12px;
+                background-color: inherit;
+                position: relative;
+                bottom: 313px;
+
+                &:hover {
+                    background-color: #C4C0B6;
+                    border-radius: 10px;
+                }
+                &__hr {
+                    margin-right: 18px;
+                    color: #8B8371;
+                }
+                &__a {
+                    font-family: Playfair Display, serif;
+                    font-size: 16px;
+                    line-height: 21px;
+                    color: #1B1A17;
+
+                }
+            }
+        }
+    }
+}

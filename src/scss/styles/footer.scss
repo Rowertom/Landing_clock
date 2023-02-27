@@ -1,0 +1,31 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 80px 180px;
+    background-color: #444240;
+    @media (max-width: 1000px){
+        flex-direction: column;
+        height: 500px;
+        flex-wrap: wrap;
+        padding: 80px 20px;
+        align-items: center;
+    }
+
+    &__group__h3 {
+        font-weight: 700;
+        line-height: 16px;
+        letter-spacing: 0.07em;
+        text-transform: uppercase;
+        padding-bottom: 30px;
+        color: #FFFFFF;
+    }
+
+    &__group__links {
+        display: flex;
+        flex-direction: column;
+        font-size: 12px;
+        line-height: 20px;
+        color: rgba(255, 255, 255, 0.75);
+    }
+}

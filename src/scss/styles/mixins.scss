@@ -1,0 +1,6 @@
+@mixin btn_hover($radius){
+    &:hover{
+        background-color: rgba($color: #555248, $alpha: 0.1);
+        border-radius: $radius;
+    }
+}

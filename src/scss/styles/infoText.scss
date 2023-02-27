@@ -1,0 +1,141 @@
+@import './mixins.scss';
+
+.info__text {
+    display: flex;
+    height: 519px;
+    @media (max-width: 1150px){
+        flex-direction: column;
+        height: 100%; 
+        align-items: center;
+        width: 100%;
+    }
+    &__style {
+        position: relative;
+        right: 100px;
+        width: 468px;
+        background-color: #F7F5EF;
+        @media (max-width: 1150px){
+            width: 100%;
+        }
+
+        &__img {
+            position: relative;
+            left: 177px;
+            top: 52px;
+            @media (max-width: 1150px){
+                position: inherit;
+                z-index: 2;
+            }
+            @media (max-width: 700px){
+                width:100%;
+                left: 120px;
+            }
+        }
+    }
+
+    &__content {
+        width: 75%;
+        height: 100%;
+        position: relative;
+        left: 100px;
+        background-color: #FDFDFB;
+        overflow: hidden;
+        @media (max-width: 1150px){
+            width: 100%;
+            left: 0;
+        }
+
+        &__text {
+            width: 100%;
+            height: 100%;
+            display: inline-flex;
+            flex-direction: column;
+            
+            &__h2 {
+                font-family: Playfair Display, serif;
+                font-size: 32px;
+                line-height: 43px;
+                color: #1B1A17;
+                padding: 140px 0 0 80px;
+            }
+
+            &__p {
+                font-size: 16px;
+                line-height: 24px;
+                color: #444240;
+                padding-left: 80px;
+            }
+
+            &__button {
+                margin: 45px 0 0 80px;
+                width: 205px;
+                height: 64px;
+                background-color: #D4B098;
+
+                &:hover {
+                    background-color: #444240;
+                    opacity: 0.6;
+                }
+
+                &__a {
+                    font-weight: 500;
+                    font-size: 12px;
+                    line-height: 14px;
+                    letter-spacing: 0.05em;
+                    color: #FFFFFF;
+                }
+            }
+
+        }
+        &__circle_up{
+            border: 2px solid;
+            border-radius: 50%;
+            width: 365px;
+            height: 365px;
+            position: absolute;
+            border-color: rgba($color: #000000, $alpha: 0.1);
+            top: -150px;
+            left: 500px;
+        }
+        &__circle_down{
+            border: 2px solid;
+            border-radius: 50%;
+            width: 744px;
+            height: 744px;
+            position: absolute;
+            border-color: rgba($color: #000000, $alpha: 0.1);
+            top: 10px;
+            left: 500px;
+        }
+    }
+    &__pagination {
+        font-size: 12px;
+        line-height: 16px;
+        color: rgba(27, 26, 23, 0.82);
+        margin-top: 500px;
+        position: absolute;
+        right: 740px;
+        @media (max-width: 1150px){
+            right: inherit;
+            margin-top: 5px;
+        }
+
+        &__left {
+            @include btn_hover(5px);
+            background: none;
+
+            &__a {
+                background: none;
+            }
+        }
+
+        &__right {
+            @include btn_hover(5px);
+            background: none;
+
+            &__a {
+                background: none;
+            }
+        }
+    }
+}
