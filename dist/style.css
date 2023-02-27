@@ -95,23 +95,26 @@ body {
       .header__nav__btn {
         display: flex;
         padding: 10px; } }
-  .header__link__button {
-    background-color: inherit;
-    width: 40px;
-    color: #1B1A17;
-    padding: 0 12px;
-    font-size: 12px; }
-    .header__link__button:hover {
-      background-color: rgba(85, 82, 72, 0.1);
-      border-radius: 50%; }
-    .header__link__button__a__like {
-      position: relative;
-      padding: 1px 4px;
-      font-size: 11px;
-      background-color: #EAE3D4;
-      left: 10px;
-      bottom: 20px;
-      border-radius: 50%; }
+  .header__link {
+    display: inherit;
+    align-items: center;
+    gap: 12px; }
+    .header__link__button {
+      background-color: inherit;
+      width: 40px;
+      color: #1B1A17;
+      font-size: 12px; }
+      .header__link__button:hover {
+        background-color: rgba(85, 82, 72, 0.1);
+        border-radius: 50%; }
+      .header__link__button__a__like {
+        position: relative;
+        padding: 1px 4px;
+        font-size: 11px;
+        background-color: #EAE3D4;
+        right: 10px;
+        bottom: 5px;
+        border-radius: 50%; }
 
 .clock__collection {
   display: flex;
